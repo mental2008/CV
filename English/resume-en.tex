@@ -1,0 +1,142 @@
+% --- LaTeX CV Template - Lingyun Yang ---
+
+% Set document class and font size
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+
+% Package imports
+\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace}
+
+% --- Page layout settings --- %
+
+% Set page margins
+\usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.15}
+
+% --- Page formatting ---
+
+% Set link colors
+% \usepackage[dvipsnames]{xcolor}
+% \hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+% Hind links
+\hypersetup{hidelinks}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+% \pagenumbering{gobble}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% Name and date of last update to this document
+\noindent{\Huge{Lingyun Yang}
+\hfill{\it\footnotesize Updated \today}}
+
+% --- Start the two-column table storing the main content ---
+
+% Set spacing between columns
+\setlength{\tabcolsep}{8pt}
+
+% --- Contact information and other items --- %
+
+\vspace{0.5cm} 
+\begin{center}
+\begin{tabular}{lll}
+% Line 1: Email, GitHub, office location
+\textbf{Email}: lyangbk@cse.ust.hk &
+\hspace{0.25in} \textbf{GitHub}: \href{https://github.com/mental2008}{mental2008} &
+\hspace{0.1in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/lingyun-yang-b2881b18a/}{lingyun-yang-b2881b18a} \\
+
+% Line 2: Phone number, LinkedIn, citizenship
+\textbf{Phone}: (+852) 9719-0933 & 
+\hspace{0.25in} \textbf{Office}: CYT 3007, HKUST & 
+\hspace{0.1in} \textbf{Web}: \href{https://www.cse.ust.hk/~lyangbk/}{https://www.cse.ust.hk/$\sim$lyangbk/} \\ 
+\end{tabular}
+\end{center}
+
+% Set the width of each column
+\begin{longtable}{p{1.3in}p{4.8in}}
+
+% --- Section: Research interests --- %
+\nohyphens{Research interests}
+& Machine learning for systems, cloud computing, resource management for large-scale clusters \\
+& \\
+
+% --- Section: Education --- %
+{Education}
+& \textbf{Hong Kong University of Science and Technology (HKUST)} \\
+& \textit{Department of Computer Science and Engineering} \\
+& Ph.D. in Computer Science and Engineering \hfill 2020 -- Present \\
+& $\diamond$ Advisor: Prof. Wei Wang \\
+& \\
+
+& \textbf{South China University of Technology (SCUT)} \\
+& \textit{School of Computer Science and Engineering} \\
+& B.Eng. in Computer Science and Technology \hfill 2016 -- 2020 \\
+& $\diamond$ Studied at All-English Innovation Class ({\it GPA: 3.82/4}) \\
+& \\
+
+% --- Section: Awards, scholarships, etc. --- %
+% --- Note: section title is spread over two lines --- %
+{Honors and }
+& $\diamond$ Merit Student \& Excellent Student Cadre \hfill Nov. 2019 \\
+{scholarships}
+& $\diamond$ National Scholarship \hfill Oct. 2019 \\
+
+& $\diamond$ Silver Medal, 2019 ICPC China Xi'an National Invitational \hfill May 2019 \\
+& $\ \ $ Programming Contest \\
+
+& $\diamond$ First Prize, 17th Guangdong Collegiate Programming Contest \hfill May 2019 \\
+
+& $\diamond$ Silver Medal, 2019 Sanqi Mutual Entertainment Cup \hfill Apr. 2019 \\
+& $\ \ $ Programming Contest \\
+
+& $\diamond$ Gold Medal, 2019 South China University of Technology ACM \hfill Apr. 2019 \\
+& $\ \ $ Programming Contest \\
+
+& $\diamond$ Bronze Medal, 2018 ACM-ICPC Asia Xuzhou Regional Contest \hfill Oct. 2018 \\
+
+& $\diamond$ Silver Medal, 1st Xiao Mi Collegiate Programming Contest \hfill Sept. 2018 \\
+
+& $\diamond$ Gold Medal, 2018 South China University of Technology ACM \hfill Apr. 2018 \\
+& $\ \ $ Programming Contest \\
+
+& $\diamond$ The First Prize Scholarship \hfill Nov. 2017 \\
+
+& $\diamond$ Bronze Medal, 2017 ACM-ICPC Asia Xian Regional Contest \hfill Oct. 2017 \\
+
+& $\diamond$ Gold Medal, 12th China Youth Robot Competition \hfill Jul. 2012 \\
+
+& $\diamond$ Champion, 2012 RoboCup Youth Robot World Cup China \hfill Mar. 2012 \\
+& $\ \ $ Division Selection Competition \\
+
+& \\
+
+% --- Section: Publications --- %
+% \nohyphens{Publications}}
+% & \textbf{Title of your most recent research paper} \\
+% & First author, second author, third author, fourth author. \\
+% & \textit{Journal of something or the other, 2020.}\\
+% & \\
+
+% & \textbf{Title of your second most recent research paper} \\
+% & First author, second author, third author, fourth author. \\
+% & \textit{Journal of something or the other, 2020.}\\
+% & \\
+
+% & \textbf{Title of your third most recent research paper} \\
+% & First author, second author, third author, fourth author. \\
+% & \textit{Journal of something or the other, 2020.}\\
+% & \\
+
+% --- End of CV! --- %
+
+\end{longtable}
+\end{document}
