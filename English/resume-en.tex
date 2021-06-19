@@ -1,0 +1,58 @@
+% --- LaTeX CV Template - Lingyun Yang ---
+
+% Set document class and font size
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+
+% Package imports
+\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace}
+
+% --- Page layout settings --- %
+
+% Set page margins
+\usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.15}
+
+% --- Page formatting ---
+
+% Set link colors
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+% \pagenumbering{gobble}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% Name and date of last update to this document
+\noindent{\Huge{Lingyun Yang}
+\hfill{\it\footnotesize Updated \today}}
+
+% --- Start the two-column table storing the main content ---
+
+% Set spacing between columns
+\setlength{\tabcolsep}{8pt}
+
+\input{contact}
+
+% Set the width of each column
+\begin{longtable}{p{1.3in}p{4.8in}}
+
+\input{research_interests}
+\input{education}
+\input{experience}
+\input{awards}
+% \input{publications}
+
+% --- End of CV! --- %
+
+\end{longtable}
+\end{document}
