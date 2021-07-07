@@ -1,0 +1,152 @@
+% --- LaTeX CV Template - Lingyun Yang ---
+
+% Set document class and font size
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+
+% Package imports
+\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace, xeCJK}
+
+% --- Page layout settings --- %
+
+% Set page margins
+\usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.15}
+
+% --- Page formatting ---
+
+% Set link colors
+% \usepackage[dvipsnames]{xcolor}
+% \hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+% Hind links
+\hypersetup{hidelinks}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+% \pagenumbering{gobble}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% Name and date of last update to this document
+\noindent{\Huge{杨凌云}
+\hfill{\it\footnotesize 更新于 \today}}
+
+% --- Start the two-column table storing the main content ---
+
+% Set spacing between columns
+\setlength{\tabcolsep}{8pt}
+
+% --- Contact information and other items --- %
+
+\vspace{0.5cm} 
+\begin{center}
+\begin{tabular}{lll}
+% Line 1: Email, GitHub, LinkedIn
+\textbf{邮箱}: lyangbk@cse.ust.hk &
+\hspace{0.25in} \textbf{GitHub}: \href{https://github.com/mental2008}{mental2008} &
+\hspace{0.1in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/lingyun-yang-b2881b18a/}{lingyun-yang-b2881b18a} \\
+
+% Line 2: Phone number, office location, website
+\textbf{手机号}: (+852) 9719-0933 & 
+\hspace{0.25in} \textbf{Office}: CYT 3007, HKUST & 
+\hspace{0.1in} \textbf{个人网站}: \href{https://www.cse.ust.hk/~lyangbk/}{https://www.cse.ust.hk/$\sim$lyangbk/} \\ 
+\end{tabular}
+\end{center}
+
+% Set the width of each column
+\begin{longtable}{p{1.3in}p{4.8in}}
+
+% --- Section: Personal profile --- %
+{个人简介}
+& 目前是博士二年级学生，就读于香港科技大学计算机科学与工程系 \\
+& \\
+
+% --- Section: Research interests --- %
+\nohyphens{研究兴趣}
+& 目前的研究兴趣主要包括云计算、大规模集群的资源管理以及运用机器学习的方法进行系统优化。 \\
+& \\
+
+% --- Section: Education --- %
+{教育经历}
+& \textbf{香港科技大学（HKUST）} \\
+& \textit{计算机科学与工程系} \\
+& 计算机科学，在读博士生 \hfill 2020 -- 至今 \\
+& $\diamond$ 导师： 王威教授 \\
+& \\
+
+& \textbf{华南理工大学（SCUT）} \\
+& \textit{计算机科学与工程学院} \\
+& 计算机科学与技术，本科 \hfill 2016 -- 2020 \\
+& $\diamond$ 就读于计算机科学与技术全英创新班 ({\it GPA: 3.82/4}) \\
+& \\
+
+% --- Section: Professional experience ---
+
+{职业经历}
+& {\textbf{阿里巴巴集团}} \hfill 中国，杭州 \\
+& \textit{研究实习生}, 云原生团队 \hfill 2020 年 12 月 - 至今 \\
+& $\diamond$ 导师：何剑 \\
+% & $\diamond$ Built morphling - an auto-configuration framework for machine learning model serving on Kubernetes, with intelligent algorithms to quickly find the optimal configuration. \\
+& \\
+
+& {\textbf{香港科技大学}} \\
+& \textit{研究助理/助教}，系统算法研究小组 \hfill 2020 年 9 月 - 至今 \\
+& \\
+ 
+& {\textbf{微软亚洲研究院}} \hfill 中国，北京 \\
+& \textit{研究实习生}, 创新工程组 \hfill 2019 年 7 月 - 2020 年 6 月 \\
+& $\diamond$ 导师：卢乐炜，李崇 \\
+& $\diamond$ Applied multiple latest attention mechanisms to face recognition models, integrated with knowledge distillation, built in CNTK. \\
+& $\diamond$ Built a neural architecture search pipeline for face recognition tasks. \\
+& $\diamond$ Designed a symmetric padding pooling layer with self-attention which can be easily integrated into any model structure, achieve the state-of-the-art performance and improve the robustness to various pertubations. \\
+& \\
+
+% --- Section: Awards, scholarships, etc. --- %
+% --- Note: section title is spread over two lines --- %
+{获奖经历}
+& $\diamond$ 三好学生 \& 优秀学生干部 \hfill 2019 年 11 月 \\
+
+& $\diamond$ 国家奖学金 \hfill 2019 年 10 月 \\
+
+& $\diamond$ 银奖，2019 年 ICPC 中国西安程序设计竞赛（全国邀请赛） \hfill 2019 年 5 月 \\
+
+& $\diamond$ 一等奖，第 17 届广东省程序设计竞赛 \hfill 2019 年 5 月 \\
+
+& $\diamond$ 银奖，2019 年三七互娱杯程序设计竞赛 \hfill 2019 年 4 月 \\
+
+& $\diamond$ 金奖，2019 年华南理工大学 ACM 程序设计竞赛 \hfill 2019 年 4 月 \\
+
+& $\diamond$ 铜奖，2018 年 ACM-ICPC 亚洲区域赛（徐州站） \hfill 2018 年 10 月 \\
+
+& $\diamond$ 银奖，第 1 届小米程序设计竞赛 \hfill 2018 年 9 月 \\
+
+& $\diamond$ 金奖，2018 年华南理工大学 ACM 程序设计竞赛 \hfill 2018 年 4 月 \\
+
+& $\diamond$ 校级一等奖学金 \hfill 2017 年 11 月 \\
+
+& $\diamond$ 铜奖，2017 年 ACM-ICPC 亚洲区域赛（西安站） \hfill Oct. 2017 \\
+
+& $\diamond$ 金牌，第 12 届全国青少年机器人竞赛 \hfill 2012 年 7 月\\
+
+& $\diamond$ 冠军, 2012 年 RoboCup 青少年机器人世界杯中国区选拔赛 \hfill 2012 年 3 月 \\
+
+% --- Section: Other interests/hobbies ---
+
+\nohyphens{兴趣爱好}
+& 喜欢阅读各种类型的书籍，打篮球，健身，美食爱好者。 \\
+& 在我的业余时间，我会不定期地写博客记录一些有趣的事物。 \\
+& 个人博客：\href{https://mental2008.github.io/}{https://mental2008.github.io/}. \\
+
+
+% --- End of CV! --- %
+
+\end{longtable}
+\end{document}
