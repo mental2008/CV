@@ -1,11 +1,12 @@
 % --- LaTeX CV Template - Lingyun Yang ---
+% Notice: required to compile with XeLaTex
 
 % Set document class and font size
 \documentclass[letterpaper, 11pt]{article}
 \usepackage[utf8]{inputenc}
 
 % Package imports
-\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace}
+\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace, xeCJK}
 
 % --- Page layout settings --- %
 
@@ -36,7 +37,7 @@
 \begin{document}
 
 % Name and date of last update to this document
-\noindent{\Huge{Lingyun Yang}
+\noindent{\Huge{Lingyun Yang (杨凌云)}
 \hfill{\it\footnotesize Updated \today}}
 
 % --- Start the two-column table storing the main content ---
@@ -51,8 +52,8 @@
 \begin{tabular}{lll}
 % Line 1: Email, GitHub, LinkedIn
 \textbf{Email}: lyangbk@cse.ust.hk &
-\hspace{0.25in} \textbf{GitHub}: \href{https://github.com/mental2008}{mental2008} &
-\hspace{0.1in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/lingyun-yang-b2881b18a/}{lingyun-yang-b2881b18a} \\
+\hspace{0.25in} \textbf{GitHub}: \href{https://github.com/mental2008}{\underline{mental2008}} &
+\hspace{0.1in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/lingyun-yang-b2881b18a/}{\underline{lingyun-yang-b2881b18a}} \\
 
 % Line 2: Phone number, office location, website
 \textbf{Phone}: (+852) 9719-0933 & 
@@ -75,7 +76,7 @@
 
 % --- Section: Research interests --- %
 \nohyphens{Research interests}
-& Machine Learning for Systems, Cloud Computing, Resource Management for large-scale GPU Clusters \\
+& Cloud Computing, Machine Learning for Systems, Resource Management for Large-Scale GPU Clusters \\
 & \\
 
 % --- Section: Education --- %
@@ -83,7 +84,7 @@
 & \textbf{Hong Kong University of Science and Technology (HKUST)} \\
 & \textit{Department of Computer Science and Engineering} \\
 & Ph.D. in Computer Science and Engineering \hfill 2020 -- Present \\
-& $\diamond$ Advisor: Prof. Wei Wang \\
+& $\diamond$ Advisor: \href{https://www.cse.ust.hk/~weiwa/index.html}{\underline{Prof. Wei Wang}} \\
 & \\
 
 & \textbf{South China University of Technology (SCUT)} \\
@@ -99,12 +100,13 @@
 {experience}
 & \textit{Research Intern}, Cluster Management Group \hfill Dec. 2020 - Present \\
 & $\diamond$ Mentors: Jian He and Dr. Yinghao Yu \\
-& $\diamond$ Co-developed Morphling, an open-source auto-configuration framework for machine learning model serving on Kubernetes, with intelligent algorithms to quickly find the optimal configuration. [\href{https://www.cse.ust.hk/~weiwa/papers/morphling-socc21.pdf}{\underline{paper}}][\href{https://github.com/kubedl-io/morphling}{\underline{code}}][\href{https://kubedl.io/tuning/intro/}{\underline{website}}] \\
+& $\diamond$ In combination with GPU virtualization technology (vGPU), developed the local agent and centralized resource ledgers for managing heterogeneous GPU resources, supported to co-locate thousands of GPU jobs of different priorities (e.g., latency-sensitive (LS), best-effort (BE)) through dynamically provisioning of GPU computing power and memory, thus significantly improving the resource utilization of large-scale GPU clusters.  \\
+& $\diamond$ Co-developed Morphling, an open-source auto-configuration framework for machine learning model serving on Kubernetes, with intelligent algorithms to quickly find the optimal configuration. [\href{https://dl.acm.org/doi/10.1145/3472883.3486987}{\underline{paper}}][\href{https://github.com/kubedl-io/morphling}{\underline{code}}][\href{https://kubedl.io/docs/morphling/intro}{\underline{website}}] \\
 & \\
 
-& {\textbf{Hong Kong University of Science and Technology}} \hfill Clear Water Bay, Kowloon, Hong Kong \\
-& \textit{Research/Teaching Assistant}, System Algorithm Group \hfill Sept. 2020 - Present \\
-& \\
+% & {\textbf{Hong Kong University of Science and Technology}} \hfill Clear Water Bay, Kowloon, Hong Kong \\
+% & \textit{Research/Teaching Assistant}, Advanced Distributed Systems Lab \hfill Sept. 2020 - Present \\
+% & \\
  
 & {\textbf{Microsoft Research Asia (MSRA)}} \hfill Beijing, China\\
 & \textit{Research Intern}, Innovation Engineering Group (IEG) \hfill Jul. 2019 - Jun. 2020 \\
@@ -179,8 +181,9 @@
 \nohyphens{Teaching activities}
 & \textbf{Hong Kong University of Science and Technology} \hfill Clear Water Bay, Kowloon, Hong Kong \\
 & \textit{Teaching Assistant, Department of Computer Science and Engineering} \\
-& $\diamond$ COMP 4651: Cloud Computing and Big Data Systems \hfill Fall 2021 \\
-& $\diamond$ COMP 4651: Cloud Computing and Big Data Systems \hfill Spring 2021 \\
+& $\diamond$ CSIT6000O: Advanced Cloud Computing \hfill Spring 2022 \\
+& $\diamond$ COMP4651: Cloud Computing and Big Data Systems \hfill Fall 2021 \\
+& $\diamond$ COMP4651: Cloud Computing and Big Data Systems \hfill Spring 2021 \\
 & \\
 
 % --- Section: Other experience --- %
@@ -188,12 +191,12 @@
 & \textbf{ACM-ICPC Competition Group} \\
 {experience}
 & \textit{Group Member \& Team Leader} \hfill 2016 - 2019 \\
-& $\diamond$ Coach: Prof. Chuhua Xian \\
+& $\diamond$ Coach: \href{http://chuhuaxian.net/}{\underline{Prof. Chuhua Xian}} \\
 & $\diamond$ Major domains: Dynamic Programming, Number Theory, Data Structure, etc. \\
 
 & \textbf{Machine Learning \& Cybernetics Research Group} \\
 & \textit{Undergraduate Research Assistant} \hfill 2017 - 2019 \\
-& $\diamond$ Advisor: Prof. Patrick Chan \\
+& $\diamond$ Advisor: \href{https://scholar.google.com.hk/citations?user=5SKOC40AAAAJ&hl=en}{\underline{Prof. Patrick Chan}} \\
 & $\diamond$ Completed research projects: Fundus Stitching, Tableware Recognition and NN Visualization. \\
 
 & \textbf{Tencent Innovation Club} \\
@@ -222,7 +225,7 @@
 % --- Section: Other interests/hobbies ---
 
 \nohyphens{Miscellaneous}
-& Read various kinds of books, play basketball, workout at the gym, food lover. \\
+& Read various kinds of books, watch movies, play basketball, workout at the gym, play badminton, food lover. \\
 & In my spare time, I also write some blogs about interesting stuffs aperiodically. Here is my personal blog (in Chinese): \href{https://blog.yanglingyun.me/}{https://blog.yanglingyun.me/}. \\
 
 % --- End of CV! --- %
