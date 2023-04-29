@@ -11,7 +11,7 @@
 % --- Page layout settings --- %
 
 % Set page margins
-\usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
+\usepackage[left=0.5in, right=0.5in, bottom=0.7in, top=0.7in]{geometry}
 
 % Set line spacing
 \renewcommand{\baselinestretch}{1.15}
@@ -76,8 +76,7 @@
 
 % --- Section: Research interests --- %
 \nohyphens{\textsc{Research Interests}}
-% & Cloud Computing, Machine Learning for Systems, Resource Management for Large-Scale GPU Clusters \\
-& Resource Management for Large-Scale GPU Clusters, ML for Systems \\
+& I am broadly interested in resource management for large-scale production clusters, especially in improving resource efficiency for AI/GPU clusters and optimizing system performance bottlenecks using machine learning methods. \\
 & \\
 
 % --- Section: Education --- %
@@ -85,7 +84,7 @@
 & \textbf{Hong Kong University of Science and Technology (HKUST)} \\
 & \textit{Department of Computer Science and Engineering} \\
 & Ph.D. in Computer Science and Engineering \hfill 2020 -- Present \\
-& $\diamond$ Advisor: \href{https://www.cse.ust.hk/~weiwa/index.html}{\underline{Prof. Wei Wang}} \\
+& $\diamond$ Advisor: Prof. Wei Wang \\
 & \\
 
 & \textbf{South China University of Technology (SCUT)} \\
@@ -100,21 +99,23 @@
 & {\textbf{Alibaba Group}} \hfill Hangzhou, China \\
 {\textsc{Experience}}
 & \textit{Research Intern}, Cluster Management Group \hfill Dec. 2020 -- Present \\
-& $\diamond$ Mentors: \href{https://www.linkedin.com/in/jian-he-2309aa34/}{\underline{Jian He}} and \href{https://scholar.google.com/citations?user=_YgjRn0AAAAJ&hl=en}{\underline{Dr. Yinghao Yu}} \\
+& $\diamond$ Mentor: Dr. Yinghao Yu \\
 % & $\diamond$ In combination with GPU virtualization technology (vGPU), developed the local agent and centralized resource ledgers for managing heterogeneous GPU resources, supported to co-locate thousands of GPU jobs of different priorities (e.g., latency-sensitive (LS), best-effort (BE)) through dynamically provisioning of GPU computing power and memory, thus significantly improving the resource utilization of large-scale GPU clusters.  \\
 % & $\diamond$ . \\
 % & $\diamond$ Developed the to enable GPU sharing technology. \\
-& $\diamond$ Co-developed Morphling [C1], an open-source auto-configuration framework for machine learning model serving on Kubernetes, with intelligent algorithms to quickly find the optimal configuration. 
-% [\href{https://dl.acm.org/doi/10.1145/3472883.3486987}{\underline{paper}}]
-[\href{https://github.com/kubedl-io/morphling}{\underline{code}}] \\
+& \textbf{Reduce GPU Resource Fragmentation} \\
+    & $\diamond$ [C3] Formally defined \textit{GPU resource fragments} and proposed the \textit{fragmentation gradient descent} algorithm to reduce resource fragmentation during scheduling. Large-scale trace evaluations show that our scheduling policy can significantly improve GPU allocation rate by 3\% compared to state-of-the-art policies. \\
+    & $\diamond$ Developed \textit{ParaSet}, a best-effort workload on Kubernetes that can dynamically adjust the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster. It is integrated into KubeDL for internal use. \\
+& \textbf{Large-Scale GPU Sharing in Production} \\
+    & $\diamond$ Enabled \textit{large-scale GPU sharing} in production clutsers, with over 4000 shared GPU containers running on a daily basis. Support the co-location of GPU tasks with different priorities (e.g., \textit{latency-sensitive}, \textit{best-effort}). \\
+    & $\diamond$ This is a multi-team collaborative project. I am responsible for the design and implementation of the single-node agent and the centralized controller. The agent collects and reports resource metrics, as well as dynamically allocates GPU resources to containers. The controller calculates potential overcommitment of resources and provides scheduling guidance to the scheduler. \\
+& \textbf{Auto-Configuration for AI Serving Service} \\
+    & $\diamond$ [C1] Co-developed Morphling, an open-source auto-configuration framework for AI serving on Kubernetes. It combines meta-learning and bayesian optimization to quickly find the optimal configuration. Internally, it is widely used for automated recommendation of container resource specifications. [\href{https://github.com/kubedl-io/morphling}{\underline{code}}] \\
 & \\
 
-% & {\textbf{Hong Kong University of Science and Technology}} \hfill Clear Water Bay, Kowloon, Hong Kong \\
-% & \textit{Research/Teaching Assistant}, Advanced Distributed Systems Lab \hfill Sept. 2020 - Present \\
-% & \\
- 
 & {\textbf{Microsoft Research Asia (MSRA)}} \hfill Beijing, China\\
 & \textit{Research Intern}, Innovation Engineering Group (IEG) \hfill Jul. 2019 -- Jun. 2020 \\
+& $\diamond$ Research on model robustness, face recognition, attention mechanisms, knowledge distillation, and neural network search. \\
 % & $\diamond$ Mentors: \href{https://www.linkedin.com/in/lewei-lu-94015977/}{\underline{Lewei Lu}} and Chong Li \\
 % & $\diamond$ Applied multiple latest attention mechanisms to face recognition models, integrated with knowledge distillation, built in CNTK. \\
 % & $\diamond$ Built a neural architecture search pipeline for face recognition tasks. \\
@@ -123,8 +124,10 @@
 
 % --- Section: Publications --- %
 \nohyphens{\textsc{Publications}}
-& [C2] Yongkang Zhang, Yinghao Yu, Wei Wang, Qiukai Chen, Jie Wu, Zuowei Zhang, Jiang Zhong, Tianchen Ding, Qizhen Weng, \textbf{Lingyun Yang}, Cheng Wang, Jian He, Guodong Yang, and Liping Zhang, “Workload Management in Alibaba Clusters: The Good, the Bad, and the Ugly,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '22}), San Francisco, CA, November 2022. \\
-& [C1] Luping Wang*, \textbf{Lingyun Yang}*, Yinghao Yu, Wei Wang, Bo Li, Xianchao Sun, Jian He, and Liping Zhang, “Morphling: Fast, Near-Optimal Auto-Configuration for Cloud-Native Model Serving,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '21}), Seattle, WA, November 2021. (*Co-first authors in alphabetical order) \\
+
+& [C3] Qizhen Weng*, \textbf{Lingyun Yang}*, Yinghao Yu, Wei Wang, Xiaochuan Tang, Guodong Yang, Liping Zhang, “Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent,” to appear in the \textit{Proceedings of USENIX Annual Technical Conference} (\textbf{ATC '21}), Boston, MA, USA, July 2023. (*Co-first authors in alphabetical order) \\
+& [C2] Yongkang Zhang, Yinghao Yu, Wei Wang, Qiukai Chen, Jie Wu, Zuowei Zhang, Jiang Zhong, Tianchen Ding, Qizhen Weng, \textbf{Lingyun Yang}, Cheng Wang, Jian He, Guodong Yang, and Liping Zhang, “Workload Management in Alibaba Clusters: The Good, the Bad, and the Ugly,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '22}), San Francisco, CA, USA, November 2022. \\
+& [C1] Luping Wang*, \textbf{Lingyun Yang}*, Yinghao Yu, Wei Wang, Bo Li, Xianchao Sun, Jian He, and Liping Zhang, “Morphling: Fast, Near-Optimal Auto-Configuration for Cloud-Native Model Serving,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '21}), Seattle, WA, USA, November 2021. (*Co-first authors in alphabetical order) \\
 & \\
 
 % --- Section: Awards, scholarships, etc. --- %
@@ -137,8 +140,9 @@
 & $\diamond$ Merit Student \& Excellent Student Cadre \hfill Nov. 2019, SCUT \\
 & $\diamond$ National Scholarship \hfill Oct. 2019, China \\
 
-& $\diamond$ Silver Medal, ICPC China Xian National Invitational \hfill May 2019 \\
-& $\ \ $ Programming Contest \\
+& $\diamond$ Silver Medal, ICPC China Xian National Invitational Contest \hfill May 2019 \\
+% & $\diamond$ Silver Medal, ICPC China Xian National Invitational \hfill May 2019 \\
+% & $\ \ $ Programming Contest \\
 
 & $\diamond$ First Prize, 17th Guangdong Collegiate Programming Contest \hfill May 2019 \\
 
@@ -171,39 +175,22 @@
 
 & \\
 
-
-
-% & \textbf{Title of your most recent research paper} \\
-% & First author, second author, third author, fourth author. \\
-% & \textit{Journal of something or the other, 2020.}\\
-% & \\
-
-% & \textbf{Title of your second most recent research paper} \\
-% & First author, second author, third author, fourth author. \\
-% & \textit{Journal of something or the other, 2020.}\\
-% & \\
-
-% & \textbf{Title of your third most recent research paper} \\
-% & First author, second author, third author, fourth author. \\
-% & \textit{Journal of something or the other, 2020.}\\
-% & \\
-
 % --- Section: Academic services --- %
 {\textsc{Academic}}
 & \textbf{Artifact Evaluation Committee} \\
 {\textsc{Services}}
-& $\diamond$ MLSys (2023) \\
+& $\diamond$ OSDI (2023), ATC (2023), MLSys (2023) \\
 & \textbf{External Reviewer} \\
 & $\diamond$ INFOCOM (2022, 2023), ICDCS (2023), APSys (2021), MSN (2021), Qshine (2020) \\
 & \\
 
 % --- Section: Teaching activities --- %
-\nohyphens{\textsc{Teaching Activities}}
-& \textbf{Hong Kong University of Science and Technology} \hfill Clear Water Bay, Kowloon, Hong Kong \\
+{\textsc{Teaching }}
+& \textbf{Hong Kong University of Science and Technology} \\
+{\textsc{Activities}}
 & \textit{Teaching Assistant, Department of Computer Science and Engineering} \\
 & $\diamond$ CSIT6000O: Advanced Cloud Computing (Spring 2022, Spring 2023) \\
 & $\diamond$ COMP4651: Cloud Computing and Big Data Systems (Spring 2021, Fall 2021) \\
-% & $\diamond$ COMP4651: Cloud Computing and Big Data Systems \hfill Spring 2021 \\
 & \\
 
 % --- Section: Other experience --- %
@@ -211,12 +198,12 @@
 & \textbf{ACM-ICPC Competition Group} \\
 {\textsc{Experience}}
 & \textit{Group Member \& Team Leader} \hfill 2016 -- 2019 \\
-& $\diamond$ Coach: \href{http://chuhuaxian.net/}{\underline{Prof. Chuhua Xian}} \\
+& $\diamond$ Coach: Prof. Chuhua Xian \\
 & $\diamond$ Major domains: Dynamic Programming, Number Theory, Data Structure, etc. \\
 
 & \textbf{Machine Learning \& Cybernetics Research Group} \\
 & \textit{Undergraduate Research Assistant} \hfill 2017 -- 2019 \\
-& $\diamond$ Advisor: \href{https://scholar.google.com.hk/citations?user=5SKOC40AAAAJ&hl=en}{\underline{Prof. Patrick Chan}} \\
+& $\diamond$ Advisor: Prof. Patrick Chan \\
 & $\diamond$ Projects: Fundus Stitching, Tableware Recognition, and NN Visualization. \\
 
 & \textbf{Tencent Innovation Club} \\
