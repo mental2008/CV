@@ -76,7 +76,7 @@
 
 % --- Section: Research interests --- %
 \nohyphens{\textsc{Research Interests}}
-& I am broadly interested in resource management for large-scale data centers, especially in improving resource efficiency for large-scale AI/GPU clusters and optimizing model serving systems. \\
+& I have a broad interest in resource management for large-scale data centers. Specifically, my research focuses on: (a) improving \textit{resource efficiency} for AI/GPU clusters; (b) building \textit{efficient} and \textit{low-cost} AI model serving systems. \\
 & \\
 
 % --- Section: Education --- %
@@ -100,17 +100,20 @@
 {\textsc{Experience}}
 & \textit{Research Intern}, Cluster Management Group \hfill Dec. 2020 -- Present \\
 & $\diamond$ Mentor: Dr. Yinghao Yu \\
-& \textbf{Mitigate GPU Resource Fragmentation} \\
-    & $\diamond$ \textbf{TBD.} GPU disaggregation for recommendation services. \\
-    & $\diamond$ [C3] Formally defined \textit{statistical GPU resource fragments} and proposed the \textit{fragmentation gradient descent} scheduling algorithm to reduce resource fragmentation. Large-scale trace evaluations show that our scheduling policy can significantly improve GPU allocation rate by 3\% compared to state-of-the-art policies. \\
-    & $\diamond$ Developed \textit{ParaSet}, a best-effort workload on Kubernetes that can dynamically adjust the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster. It is integrated into KubeDL for internal use. \\
-& \textbf{Large-Scale GPU Sharing in Production} \\
+& \textbf{Resource Management for AI/GPU Clusters} \\
+& \textit{\emph{Mitigate GPU Resource Fragmentation}} \\
+    & $\diamond$ [\textbf{Under review}] GPU disaggregation for recommendation services. \\
+    & $\diamond$ [\textbf{ATC 2023}] Formally identified \textit{statistical GPU resource fragments} and proposed the \textit{fragmentation gradient descent} scheduling algorithm to reduce resource fragmentation. Our scheduling policy can significantly improve GPU allocation rate by 3\% compared to state-of-the-art policies. [\href{https://github.com/hkust-adsl/kubernetes-scheduler-simulator}{\underline{code}}] \\
+    & $\diamond$ Developed \textit{ParaSet}, a best-effort workload on Kubernetes that can dynamically adjust the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster and is integrated into KubeDL for internal use. \\
+& \textit{\emph{Large-Scale GPU Sharing in Production}} \\
     & $\diamond$ Enabled \textit{large-scale GPU sharing} in production clusters, with over 10k shared GPU containers running on a daily basis. Support the co-location of GPU tasks with different priorities (e.g., \textit{latency-sensitive}, \textit{best-effort}). \\
-    & $\diamond$ This was a multi-team collaborative project. I was responsible for the design and implementation of the single-node agent and the centralized controller. The agent periodically collects and reports resource usage metrics, as well as dynamically allocates GPU resources to containers. The controller calculates potential overcommitment of resources and provides scheduling guidance to the scheduler. \\
-& \textbf{Efficient Diffusion Model Serving System} \\
-    & $\diamond$ \textbf{TBD.} \\
-& \textbf{Auto-Configuration for AI Serving Service} \\
-    & $\diamond$ [C1] Developed Morphling, an open-source auto-configuration framework for AI serving on Kubernetes. It combines meta-learning and bayesian optimization to quickly find the optimal configuration. Internally, it was widely used for automated recommendation of container resource specifications. [\href{https://github.com/kubedl-io/morphling}{\underline{code}}] \\
+    % & $\diamond$ This was a multi-team collaborative project. I was responsible for the design and implementation of the single-node agent and the centralized controller. The agent periodically collects and reports resource usage metrics, as well as dynamically allocates GPU resources to containers. The controller calculates potential overcommitment of resources and provides scheduling guidance to the scheduler. \\
+    & $\diamond$ Specifically, I was responsible for the design and implementation of the node-level agent and the cluster-level controller. The agent periodically collects and reports resource usage metrics, as well as dynamically allocates GPU resources to different containers. The controller calculates potential resource overcommitment and provides scheduling guidance to the cluster scheduler. \\
+& \textbf{Efficient and Low-cost AI Model Serving Systems} \\
+& \textit{\emph{Efficient Diffusion Model Serving with Add-on Modules}} \\
+    & $\diamond$ \textbf{[Under review]} Developed SwiftDiffusion. \\
+& \textit{\emph{Auto-Configuration for AI Serving Service}} \\
+    & $\diamond$ [\textbf{SoCC 2021}] Developed Morphling, an open-source auto-configuration framework for AI serving on Kubernetes. It combines \textit{meta-learning} and \textit{bayesian optimization} to quickly find the optimal configuration. It was widely used in Alibaba for automated recommendation of container resource specifications. [\href{https://github.com/kubedl-io/morphling}{\underline{code}}] \\
 & \\
 
 & {\textbf{Microsoft Research Asia (MSRA)}} \hfill Beijing, China\\
@@ -125,11 +128,11 @@
 % --- Section: Publications --- %
 \nohyphens{\textsc{Publications}}
 & \textit{* denotes co-first authors} \\
-& [C3] Qizhen Weng*, \textbf{\uline{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Xiaochuan Tang, Guodong Yang, Liping Zhang, “Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent,” in the \textit{Proceedings of USENIX Annual Technical Conference} (\textbf{ATC '23}), Boston, MA, USA, July 2023. \\
-& [C2] Yongkang Zhang, Yinghao Yu, Wei Wang, Qiukai Chen, Jie Wu, Zuowei Zhang, Jiang Zhong, Tianchen Ding, Qizhen Weng, \textbf{\uline{Lingyun Yang}}, Cheng Wang, Jian He, Guodong Yang, and Liping Zhang, “Workload Management in Alibaba Clusters: The Good, the Bad, and the Ugly,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '22}), San Francisco, CA, USA, November 2022. \\
-& [C1] Luping Wang*, \textbf{\uline{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Bo Li, Xianchao Sun, Jian He, and Liping Zhang, “Morphling: Fast, Near-Optimal Auto-Configuration for Cloud-Native Model Serving,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '21}), Seattle, WA, USA, November 2021. \\
-& \textit{Preprint} \\
-& [P1] Suyi Li, \textbf{\uline{Lingyun Yang}}*, Xiaoxiao Jiang, Hanfeng Lu, Zhipeng Di, Weiyi Lu, Jiawei Chen, Kan Liu, Yinghao Yu, Tao Lan, Guodong Yang, Lin Qu, Liping Zhang, Wei Wang, “SwiftDiffusion: Efficient Diffusion Model Serving with Add-on Modules,” \textit{arXiv preprint arXiv:2407.02031}, 2024. \\
+& $\diamond$ Suyi Li*, \textbf{\emph{Lingyun Yang}}*, Xiaoxiao Jiang, Hanfeng Lu, Zhipeng Di, Weiyi Lu, Jiawei Chen, Kan Liu, Yinghao Yu, Tao Lan, Guodong Yang, Lin Qu, Liping Zhang, Wei Wang, “SwiftDiffusion: Efficient Diffusion Model Serving with Add-on Modules,” \textit{arXiv preprint arXiv:2407.02031}, 2024. \\
+& $\diamond$ \textbf{\emph{Lingyun Yang}}, Yongchen Wang, Yinghao Yu, Qizhen Weng, Jianbo Dong, Kan Liu, Chi Zhang, Yanyi Zi, Hao Li, Zechao Zhang, Nan Wang, Yu Dong, Menglei Zheng, Lanlan Xi, Xiaowei Lu, Liang Ye, Guodong Yang, Binzhang Fu, Tao Lan, Liping Zhang, Lin Qu, Wei Wang, “GPU-Disaggregated Serving for Deep Learning Recommendation Models at Scale,” \textit{under review}. \\
+& $\diamond$ Qizhen Weng*, \textbf{\emph{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Xiaochuan Tang, Guodong Yang, Liping Zhang, “Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent,” in the \textit{Proceedings of USENIX Annual Technical Conference} (\textbf{ATC '23}), Boston, MA, USA, July 2023. \\
+& $\diamond$ Yongkang Zhang, Yinghao Yu, Wei Wang, Qiukai Chen, Jie Wu, Zuowei Zhang, Jiang Zhong, Tianchen Ding, Qizhen Weng, \textbf{\emph{Lingyun Yang}}, Cheng Wang, Jian He, Guodong Yang, and Liping Zhang, “Workload Management in Alibaba Clusters: The Good, the Bad, and the Ugly,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '22}), San Francisco, CA, USA, November 2022. \\
+& $\diamond$ Luping Wang*, \textbf{\emph{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Bo Li, Xianchao Sun, Jian He, and Liping Zhang, “Morphling: Fast, Near-Optimal Auto-Configuration for Cloud-Native Model Serving,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '21}), Seattle, WA, USA, November 2021. \\
 & \\
 
 % --- Section: Awards, scholarships, etc. --- %
