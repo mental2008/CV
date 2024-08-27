@@ -2,7 +2,7 @@
 % --- LaTeX CV Template - Lingyun Yang ---
 
 % Set document class and font size
-\documentclass[letterpaper, 11pt]{article}
+\documentclass[letterpaper, 10pt]{article}
 \usepackage[utf8]{inputenc}
 
 % Package imports
@@ -11,7 +11,11 @@
 % --- Page layout settings --- %
 
 % Set page margins
-\usepackage[left=0.5in, right=0.5in, bottom=0.7in, top=0.7in]{geometry}
+\usepackage[left=1.0in, right=1.0in, bottom=0.7in, top=0.7in]{geometry}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
 
 % Set line spacing
 \renewcommand{\baselinestretch}{1.15}
@@ -24,10 +28,6 @@
 
 % Hind links
 \hypersetup{hidelinks}
-
-% Set font to Libertine, including math support
-\usepackage{libertine}
-\usepackage[libertine]{newtxmath}
 
 % Remove page numbering
 % \pagenumbering{gobble}
@@ -52,32 +52,33 @@
 \begin{tabular}{lll}
 % % Line 1: Email, GitHub, LinkedIn
 \textbf{Email}: \href{mailto:lyangbk@cse.ust.hk}{\underline{lyangbk@cse.ust.hk}} &
-\hspace{0.25in} \textbf{GitHub}: \href{https://github.com/mental2008}{\underline{mental2008}} &
-\hspace{0.1in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/stephenyang1999/}{\underline{stephenyang1999}} \\
+\hspace{0.65in} \textbf{GitHub}: \href{https://github.com/mental2008}{\underline{mental2008}} &
+\hspace{0.25in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/stephenyang1999/}{\underline{stephenyang1999}} \\
 
 % % Line 2: Phone number, office location, website
-\textbf{Phone}: (+86) 135 0284 6103 &
-\hspace{0.25in} \textbf{Office}: BDI 101, UC, HKUST &
-\hspace{0.1in} \textbf{Web}: \href{https://www.lingyunyang.com/}{\underline{https://www.lingyunyang.com/}} \\
+\textbf{Phone}: (+86) 135-0284-6103 &
+\hspace{0.65in} \textbf{Office}: BDI 101, UC, HKUST &
+\hspace{0.25in} \textbf{Web}: \href{https://www.lingyunyang.com/}{\underline{https://www.lingyunyang.com/}} \\
 \end{tabular}
 \end{center}
 
 % Set the width of each column
 % \begin{longtable}{p{1.3in}p{4.8in}}
-\begin{longtable}{p{1.3in}p{5.0in}}
+% \begin{longtable}{p{1.3in}p{5.0in}}
+\begin{longtable}{p{0.7in}p{6.0in}}
 
 % --- Section: Personal profile --- %
-{\textsc{Profile}}
-& Ph.D. Candidate \\
-& Department of Computer Science and Engineering \\
-& Hong Kong University of Science and Technology \\
-& Clear Water Bay, Kowloon, Hong Kong \\
-& \\
+% {\textsc{Profile}}
+% & Ph.D. Candidate \\
+% & Department of Computer Science and Engineering \\
+% & Hong Kong University of Science and Technology \\
+% & Clear Water Bay, Kowloon, Hong Kong \\
+% & \\
 
 % --- Section: Research interests --- %
 % \nohyphens{\textsc{Research Interests}}
 \textsc{Research}
-& I have a broad interest in resource management for large-scale data centers. \\
+& I have a broad interest in resource management for large-scale data centers / AI infrastructure. \\
 \textsc{Interests}
 & Specifically, my research focuses on: (a) improving \textit{resource efficiency} for AI/GPU clusters; (b) building \textit{efficient} and \textit{low-cost} AI model serving systems. \\
 & \\
@@ -98,28 +99,34 @@
 
 % --- Section: Professional experience ---
 
-{\textsc{Professional}}
+\nohyphens{\textsc{Internship}}
+% {\textsc{Professional}}
 & {\textbf{Alibaba Group}} \hfill Hangzhou, China \\
-{\textsc{Experience}}
+% {\textsc{Experience}}
 & \textit{Research Intern}, Cluster Management Group \hfill Dec. 2020 -- Present \\
 & $\diamond$ Mentor: Dr. Yinghao Yu \\
+
 & \textbf{Resource Management for AI/GPU Clusters} \\
+
 & \textit{\emph{Mitigate GPU Resource Fragmentation}} \\
     & $\diamond$
-    [\textbf{\textit{Under Review}}]
-    Proposed the GPU-disaggregated DLRM serving system to eliminate \textit{resource mismatch} and meet \textit{elastic} demand.
-    By leveraging RDMA network to compute the computation graph on GPU and CPU nodes separately, it reduced CPU fragments by 53\% and GPU fragments by 27\%.
-    Saved up to 90\% of GPUs when loaning GPU servers from training clusters, during the seasonal traffic peaks (e.g., Double 11 Shopping Festival). \\
+    % [\textbf{\textit{Under Review}}]
+    Proposed a GPU-disaggregated DLRM serving system to eliminate \textit{resource mismatch} and meet \textit{elastic} demand.
+    By leveraging RDMA network to \textit{separately} compute the computation graph on GPU and CPU nodes, it reduced CPU fragments by 53\% and GPU fragments by 27\%.
+    During seasonal traffic peaks (e.g., Double 11 Shopping Festival), it saved up to 90\% of GPUs when loaning GPU servers from training clusters. \\
 
-    & $\diamond$ [\textbf{ATC 2023}] Formally quantified \textit{statistical GPU resource fragments} and proposed the \textit{fragmentation gradient descent} scheduling algorithm to reduce resource fragmentation. Our scheduling policy can significantly reduce \textit{unallocated} GPUs by up to 49\% compared to state-of-the-art policies. [\href{https://github.com/hkust-adsl/kubernetes-scheduler-simulator}{\underline{code}}] \\
-    & $\diamond$ Developed \textit{ParaSet}, a \textit{best-effort} workload on Kubernetes that can dynamically adjust the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster and is integrated into KubeDL for internal use. \\
+    & $\diamond$ [\textbf{ATC 2023}] Formally quantified \textit{statistical GPU resource fragments} and proposed the \textit{fragmentation gradient descent} scheduling algorithm to reduce resource fragmentation. Our scheduling policy can significantly reduce \textit{unallocated} GPUs by up to 49\% compared to state-of-the-art policies. [\href{https://github.com/hkust-adsl/kubernetes-scheduler-simulator}{\underline{code}}] [\href{https://github.com/alibaba/clusterdata/tree/master/cluster-trace-gpu-v2023}{\underline{trace}}] \\
+
+    & $\diamond$ Developed ParaSet, a \textit{best-effort} workload on Kubernetes that dynamically adjusts the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster and is integrated into KubeDL for internal use. \\
+
 & \textit{\emph{Large-Scale GPU Sharing in Production}} \\
-    & $\diamond$ Enabled \textit{large-scale GPU sharing} in production clusters, with over 10k shared GPU containers running on a daily basis. Support the co-location of GPU tasks with different priorities (e.g., \textit{latency-sensitive}, \textit{best-effort}). \\
-    % & $\diamond$ This was a multi-team collaborative project. I was responsible for the design and implementation of the single-node agent and the centralized controller. The agent periodically collects and reports resource usage metrics, as well as dynamically allocates GPU resources to containers. The controller calculates potential overcommitment of resources and provides scheduling guidance to the scheduler. \\
-    & $\diamond$ Specifically, I designed and implemented the node-level agent and the cluster-level controller. The agent periodically collects and reports resource usage metrics, as well as dynamically allocates GPU resources to different containers. The controller calculates potential resource overcommitment and provides scheduling guidance to the cluster scheduler. \\
+    & $\diamond$ Enabled \textit{large-scale GPU sharing} in production clusters, with over 10k shared GPU containers running daily. Support the co-location of GPU tasks with different priorities (e.g., \textit{latency-sensitive}, \textit{best-effort}). Designed and implemented the \textit{node-level} agent and the \textit{cluster-level} controller. The agent periodically collects and reports resource usage metrics and dynamically allocates GPU resources to containers. The controller calculates potential resource overcommitment and provides scheduling guidance to the cluster scheduler. \\
+
 & \textbf{Efficient and Low-cost AI Model Serving Systems} \\
-& \textit{\emph{Efficient Diffusion Model Serving with Add-on Modules}} \\
-    & $\diamond$ \textbf{[\textit{Under Review}]} Developed SwiftDiffusion, a system that efficiently generates high-quality images with stable diffusion models and add-on modules (i.e., ControlNets and LoRAs). Incorporated serveral novel designs, including ControlNet-as-a-Service, asynchronous LoRA loading, and kernel optimization. Achieved up to $5 \times$ in latency and $2 \times$ in throughput without sacrificing image quality.\\
+& \textit{\emph{Efficient Text-to-Image Diffusion Model Serving with Add-on Modules}} \\
+    & $\diamond$
+        % \textbf{[\textit{Under Review}]}
+        Developed SwiftDiffusion, a system that efficiently generates high-quality images with stable diffusion models and add-on modules (i.e., ControlNets and LoRAs). Incorporated serveral novel designs, including ControlNet-as-a-Service, asynchronous LoRA loading, and kernel optimization. Achieved up to $5 \times$ in latency and $2 \times$ in throughput without sacrificing image quality.\\
 & \textit{\emph{Auto-Configuration for AI Serving Service}} \\
     & $\diamond$
     [\textbf{SoCC 2021}]
@@ -134,7 +141,7 @@
     % & $\diamond$ Designed a symmetric padding pooling layer with self-attention which can be easily integrated into any model structure, achieve the state-of-the-art performance and improve the robustness to various pertubations. \\
     % & $\diamond$ Built a neural architecture search pipeline for face recognition tasks. \\
     % & $\diamond$ Applied multiple latest attention mechanisms to face recognition models, integrated with knowledge distillation, built in CNTK. \\
-    & $\diamond$ Research on model robustness, face recognition, attention mechanisms, knowledge distillation, and neural architecture search. \\
+    & $\diamond$ Conducted research on model robustness, face recognition, attention mechanisms, knowledge distillation, and neural architecture search. \\
 % & $\diamond$ Applied multiple latest attention mechanisms to face recognition models, integrated with knowledge distillation, built in CNTK. \\
 % & $\diamond$ Built a neural architecture search pipeline for face recognition tasks. \\
 % & $\diamond$ Designed a symmetric padding pooling layer with self-attention which can be easily integrated into any model structure, achieve the state-of-the-art performance and improve the robustness to various pertubations. \\
@@ -152,9 +159,10 @@
 
 % --- Section: Awards, scholarships, etc. --- %
 % --- Note: section title is spread over two lines --- %
-{\textsc{Honors and }}
+\nohyphens{\textsc{Awards}}
+% {\textsc{Honors and }}
 & $\diamond$ Postgraduate Scholarship \hfill 2020 -- Present, HKUST \\
-{\textsc{Scholarships}}
+% {\textsc{Scholarships}}
 & $\diamond$ Star of Tomorrow Internship Award of Excellence \hfill Jul. 2020, MSRA \\
 
 & $\diamond$ Merit Student \& Excellent Student Cadre \hfill Nov. 2019, SCUT \\
@@ -256,7 +264,8 @@
 
 % --- Section: Other interests/hobbies ---
 
-\nohyphens{\textsc{Miscellaneous}}
+% \nohyphens{\textsc{Miscellaneous}}
+\nohyphens{\textsc{Misc}}
 & Play basketball \& badminton \& squash, workout at the gym, foodie. \\
 & My paper reading notes are available at \href{https://paper.lingyunyang.com/}{https://paper.lingyunyang.com/}. \\
 % & Read various kinds of books, watch movies, play basketball \& badminton, workout at the gym, food lover. \\
