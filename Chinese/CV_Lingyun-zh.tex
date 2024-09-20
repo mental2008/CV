@@ -118,7 +118,7 @@
 
 & \textit{\underline{高效的文生图推理系统}} \\
 
-    & $\diamond$ 针对时下最新的文生图模型，提出了 SwiftDiffusion，一个高效整合了 stable diffusion 和 add-on modules（如 ControlNets、LoRAs）的推理系统，包括多个创新设计如：服务化 ControlNet、异步 LoRA 加载及算子优化。在保障图片质量的前提下，降低了最多 $5\times$ 的推理时延、提高了最多 $2\times$ 的吞吐量。 \\
+    & $\diamond$ 针对最新的文生图模型，提出了 SwiftDiffusion，一个高效整合了 diffusion 模型和 add-on 模块（如 ControlNets、LoRAs）的推理系统，包括多个创新设计如：服务化 ControlNet、异步 LoRA 加载。在保障图片质量的前提下，能够最多降低 7.8$\times$ 的推理时延、提高 1.6$\times$ 的吞吐量。 \\
 
 & \textit{\underline{AI 推理服务的自动化配置}} \\
 
@@ -136,11 +136,16 @@
 
 {学术论文}
 & \textit{* 表示共同第一作者，名字按字典序排列} \\
+\hfill [C3]
+& $\diamond$ Qizhen Weng*, \textbf{\underline{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Xiaochuan Tang, Guodong Yang, Liping Zhang, “Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent,” in the \textit{Proceedings of USENIX Annual Technical Conference} (\textbf{ATC '23}), Boston, MA, USA, July 2023. \textit{(\textbf{CCF-A}, acceptance rate: 65/353=18.4\%)} \\
+\hfill [C1]
+& $\diamond$ Yongkang Zhang, Yinghao Yu, Wei Wang, Qiukai Chen, Jie Wu, Zuowei Zhang, Jiang Zhong, Tianchen Ding, Qizhen Weng, \textbf{\underline{Lingyun Yang}}, Cheng Wang, Jian He, Guodong Yang, and Liping Zhang, “Workload Management in Alibaba Clusters: The Good, the Bad, and the Ugly,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '22}), San Francisco, CA, USA, November 2022. \textit{(\textbf{CCF-B}, acceptance rate: 38/155=24.5\%)} \\
+\hfill [C1]
+& $\diamond$ Luping Wang*, \textbf{\underline{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Bo Li, Xianchao Sun, Jian He, and Liping Zhang, “Morphling: Fast, Near-Optimal Auto-Configuration for Cloud-Native Model Serving,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '21}), Seattle, WA, USA, November 2021. \textit{(\textbf{CCF-B}, acceptance rate: 46/145=31.7\%)} \\
+\hfill [I2]
 & $\diamond$ Suyi Li*, \textbf{\underline{Lingyun Yang}}*, Xiaoxiao Jiang, Hanfeng Lu, Zhipeng Di, Weiyi Lu, Jiawei Chen, Kan Liu, Yinghao Yu, Tao Lan, Guodong Yang, Lin Qu, Liping Zhang, Wei Wang, “SwiftDiffusion: Efficient Diffusion Model Serving with Add-on Modules,” \textit{arXiv preprint arXiv:2407.02031}, 2024. \\
+\hfill [I1]
 & $\diamond$ \textbf{\underline{Lingyun Yang}}, Yongchen Wang, Yinghao Yu, Qizhen Weng, Jianbo Dong, Kan Liu, Chi Zhang, Yanyi Zi, Hao Li, Zechao Zhang, Nan Wang, Yu Dong, Menglei Zheng, Lanlan Xi, Xiaowei Lu, Liang Ye, Guodong Yang, Binzhang Fu, Tao Lan, Liping Zhang, Lin Qu, Wei Wang, “GPU-Disaggregated Serving for Deep Learning Recommendation Models at Scale,” \textit{under review}. \\
-& $\diamond$ Qizhen Weng*, \textbf{\underline{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Xiaochuan Tang, Guodong Yang, Liping Zhang, “Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent,” in the \textit{Proceedings of USENIX Annual Technical Conference} (\textbf{ATC '23}), Boston, MA, USA, July 2023. (\textit{acceptance rate: 18.4\%}) \\
-& $\diamond$ Yongkang Zhang, Yinghao Yu, Wei Wang, Qiukai Chen, Jie Wu, Zuowei Zhang, Jiang Zhong, Tianchen Ding, Qizhen Weng, \textbf{\underline{Lingyun Yang}}, Cheng Wang, Jian He, Guodong Yang, and Liping Zhang, “Workload Management in Alibaba Clusters: The Good, the Bad, and the Ugly,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '22}), San Francisco, CA, USA, November 2022. (\textit{acceptance rate: 24.5\%}) \\
-& $\diamond$ Luping Wang*, \textbf{\underline{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Bo Li, Xianchao Sun, Jian He, and Liping Zhang, “Morphling: Fast, Near-Optimal Auto-Configuration for Cloud-Native Model Serving,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '21}), Seattle, WA, USA, November 2021. (\textit{acceptance rate: 31.7\%}) \\
 & \\
 
 % --- Section: Awards, scholarships, etc. --- %
