@@ -2,7 +2,7 @@
 % --- LaTeX CV Template - Lingyun Yang ---
 
 % Set document class and font size
-\documentclass[letterpaper, 10pt]{article}
+\documentclass[letterpaper, 12pt]{article}
 \usepackage[utf8]{inputenc}
 
 % Package imports
@@ -11,7 +11,7 @@
 % --- Page layout settings --- %
 
 % Set page margins
-\usepackage[left=1.0in, right=1.0in, bottom=0.7in, top=0.7in]{geometry}
+\usepackage[left=0.3in, right=0.3in, bottom=0.7in, top=0.7in]{geometry}
 
 % Set font to Libertine, including math support
 \usepackage{libertine}
@@ -43,7 +43,7 @@
 % --- Start the two-column table storing the main content ---
 
 % Set spacing between columns
-\setlength{\tabcolsep}{4pt}
+\setlength{\tabcolsep}{10pt}
 
 % --- Contact information and other items --- %
 
@@ -76,24 +76,24 @@
 % & \\
 
 % --- Section: Research interests --- %
-% \nohyphens{\textsc{Research Interests}}
-\textsc{Research}
-& I have a broad interest in resource management for large-scale data centers / AI infrastructure. \\
-\textsc{Interests}
-& Specifically, my research focuses on: (a) improving \textit{resource efficiency} for AI/GPU clusters; (b) building \textit{efficient} and \textit{low-cost} AI model serving systems. \\
+\nohyphens{\textsc{Research Interests}}
+% \textsc{Research}
+& I have a broad interest in resource management for large-scale data centers / AI infrastructure.
+Specifically, my research focuses on: (a) improving \textit{resource efficiency} for AI/GPU clusters; (b) building \textit{efficient} and \textit{low-cost} AI model serving systems. \\
+% \textsc{Interests}
 & \\
 
 % --- Section: Education --- %
 {\textsc{Education}}
 & \textbf{Hong Kong University of Science and Technology (HKUST)} \\
 & \textit{Department of Computer Science and Engineering} \\
-& Ph.D. in Computer Science and Engineering \hfill 2020 -- Present \\
+& Ph.D. in Computer Science and Engineering \hfill Sep. 2020 -- Present \\
 & $\diamond$ Advisor: Prof. Wei Wang \hfill (\textit{expected to graduate in Fall 2025}) \\
 & \\
 
 & \textbf{South China University of Technology (SCUT)} \\
 & \textit{School of Computer Science and Engineering} \\
-& B.Eng. in Computer Science and Technology \hfill 2016 -- 2020 \\
+& B.Eng. in Computer Science and Technology \hfill Sep. 2016 -- Jul. 2020 \\
 & $\diamond$ Studied at All-English Innovation Class (GPA: 3.82/4); National Scholarship. \\
 & \\
 
@@ -101,39 +101,48 @@
 
 \nohyphens{\textsc{Internship}}
 % {\textsc{Professional}}
-& {\textbf{Alibaba Group}} \hfill Hangzhou, China \\
+& {\textbf{Alibaba Group \& Alibaba Cloud}} \hfill Hangzhou, China \\
 % {\textsc{Experience}}
-& \textit{Research Intern}, Cluster Management Group \hfill Dec. 2020 -- Present \\
+& \textit{Research Intern}, Cluster Management Group, AI Infra \hfill Dec. 2020 -- Present \\
 & $\diamond$ Mentor: Dr. Yinghao Yu \\
 
-& \textbf{Resource Management for AI/GPU Clusters} \\
+% & \textbf{Resource Management for AI/GPU Clusters} \\
 
-& \textit{\emph{Mitigate GPU Resource Fragmentation}} \\
-    & $\diamond$ [\textbf{ATC 2023}] Formally quantified \textit{statistical GPU resource fragments} and proposed the \textit{fragmentation gradient descent} scheduling algorithm to reduce resource fragmentation. Our scheduling policy can significantly reduce \textit{unallocated} GPUs by up to 49\% compared to state-of-the-art policies. [\href{https://github.com/hkust-adsl/kubernetes-scheduler-simulator}{\underline{code}}] [\href{https://github.com/alibaba/clusterdata/tree/master/cluster-trace-gpu-v2023}{\underline{trace}}] \\
-
+% & \textit{\emph{Mitigate GPU Resource Fragmentation}} \\
     & $\diamond$
-    % [\textbf{\textit{Under Review}}]
-    Proposed a GPU-disaggregated DLRM serving system to eliminate \textit{resource mismatch} and meet \textit{elastic} demand.
-    By leveraging RDMA network to \textit{separately} compute the computation graph on GPU and CPU nodes, it reduced CPU fragments by 53\% and GPU fragments by 27\%.
-    During seasonal traffic peaks (e.g., Double 11 Shopping Festival), it saved up to 90\% of GPUs when loaning GPU servers from training clusters. \\
+    Defragment GPUs in Heterogeneous GPU Clusters (\underline{ATC 2023}).
+    % [\textbf{ATC 2023, C3}]
+    % Formally quantified \textit{statistical GPU resource fragments} and proposed the \textit{fragmentation gradient descent} scheduling algorithm to reduce resource fragmentation. Our scheduling policy can significantly reduce \textit{unallocated} GPUs by up to 49\% compared to state-of-the-art policies.
+    % [\href{https://github.com/hkust-adsl/kubernetes-scheduler-simulator}{\underline{code}}]
+    % [\href{https://github.com/alibaba/clusterdata/tree/master/cluster-trace-gpu-v2023}{\underline{trace}}]
+    \\
 
-    & $\diamond$ Developed ParaSet, a \textit{best-effort} workload on Kubernetes that dynamically adjusts the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster and is integrated into KubeDL for internal use. \\
+    % & $\diamond$
+    % [\textbf{Under Review, I1}]
+    % Proposed a GPU-disaggregated DLRM serving system to eliminate \textit{resource mismatch} and meet \textit{elastic} demand.
+    % By leveraging RDMA network to \textit{separately} compute the computation graph on GPU and CPU nodes, it reduced CPU fragments by 53\% and GPU fragments by 27\%.
+    % During seasonal traffic peaks (e.g., Double 11 Shopping Festival), it saved up to 90\% of GPUs when loaning GPU servers from training clusters. \\
+    \\
 
-& \textit{\emph{Large-Scale GPU Sharing in Production}} \\
-    & $\diamond$ Enabled \textit{large-scale GPU sharing} in production clusters, with over 10k shared GPU containers running daily. Support the co-location of GPU tasks with different priorities (e.g., \textit{latency-sensitive}, \textit{best-effort}). Designed and implemented the \textit{node-level} agent and the \textit{cluster-level} controller. The agent periodically collects and reports resource usage metrics and dynamically allocates GPU resources to containers. The controller calculates potential resource overcommitment and provides scheduling guidance to the cluster scheduler. \\
+    % & $\diamond$ Developed ParaSet, a \textit{best-effort} workload on Kubernetes that dynamically adjusts the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster and is integrated into KubeDL for internal use. \\
 
-& \textbf{Efficient and Low-cost AI Model Serving Systems} \\
-& \textit{\emph{Efficient Text-to-Image Diffusion Model Serving with Add-on Modules}} \\
-    & $\diamond$
-        % \textbf{[\textit{Under Review}]}
-        Developed SwiftDiffusion, a system that efficiently generates high-quality images with stable diffusion models and add-on modules (i.e., ControlNets and LoRAs). Incorporated serveral novel designs, including ControlNet-as-a-Service, asynchronous LoRA loading, and kernel optimization. Achieved up to 7.8$\times$ in latency and 1.6$\times$ in throughput without compromising image quality.\\
-& \textit{\emph{Auto-Configuration for AI Serving Service}} \\
-    & $\diamond$
-    [\textbf{SoCC 2021}]
-    Developed Morphling, an open-source auto-configuration framework for AI serving on Kubernetes.
-    Combined \textit{meta-learning} and \textit{bayesian optimization} to quickly find the \textit{optimal} configuration.
-    It was widely used in Alibaba for automated recommendation of container resource specifications. [\href{https://github.com/kubedl-io/morphling}{\underline{code}}] \\
-& \\
+% & \textit{\emph{Large-Scale GPU Sharing in Production}} \\
+%     & $\diamond$ Enabled \textit{large-scale GPU sharing} in production clusters, with over 10k shared GPU containers running daily. Support the co-location of GPU tasks with different priorities (e.g., \textit{latency-sensitive}, \textit{best-effort}). Designed and implemented the \textit{node-level} agent and the \textit{cluster-level} controller. The agent periodically collects and reports resource usage metrics and dynamically allocates GPU resources to containers. The controller calculates potential resource overcommitment and provides scheduling guidance to the cluster scheduler. \\
+
+% & \textbf{Efficient and Low-cost AI Model Serving Systems} \\
+% & \textit{\emph{Efficient Text-to-Image Diffusion Model Serving with Add-on Modules}} \\
+%     & $\diamond$
+%         [\textbf{Under Review, I2}]
+%         Developed SwiftDiffusion, a system that efficiently generates high-quality images with stable diffusion models and add-on modules (i.e., ControlNets and LoRAs). Incorporated serveral novel designs, including ControlNet-as-a-Service, asynchronous LoRA loading, and kernel optimization. Achieved up to 7.8$\times$ in latency and 1.6$\times$ in throughput without compromising image quality.\\
+% & \textit{\emph{Auto-Configuration for AI Serving Service}} \\
+%     & $\diamond$
+%     [\textbf{SoCC 2021, C1}]
+%     Developed Morphling, an open-source auto-configuration framework for AI serving on Kubernetes.
+%     Combined \textit{meta-learning} and \textit{bayesian optimization} to quickly find the \textit{optimal} resource configuration (e.g., CPU cores, GPU timeshare, GPU memory, GPU type) and runtime parameters (e.g., batch size).
+%     % It was widely used in Alibaba for automated recommendation of container resource specifications.
+%     [\href{https://github.com/kubedl-io/morphling}{\underline{code}}]
+%     \\
+% & \\
 
 & {\textbf{Microsoft Research Asia (MSRA)}} \hfill Beijing, China\\
 & \textit{Research Intern}, Innovation Engineering Group (IEG) \hfill Jul. 2019 -- Jun. 2020 \\
@@ -169,14 +178,14 @@
 % --- Note: section title is spread over two lines --- %
 \nohyphens{\textsc{Awards}}
 % {\textsc{Honors and }}
-& $\diamond$ Postgraduate Scholarship \hfill 2020 -- Present, HKUST \\
+& $\diamond$ Postgraduate Scholarship \hfill 2020 -- 2024, HKUST \\
 % {\textsc{Scholarships}}
 & $\diamond$ Star of Tomorrow Internship Award of Excellence \hfill Jul. 2020, MSRA \\
 
 & $\diamond$ Merit Student \& Excellent Student Cadre \hfill Nov. 2019, SCUT \\
 & $\diamond$ National Scholarship \hfill Oct. 2019, China \\
 
-& $\diamond$ Silver Medal, ICPC China Xian National Invitational Contest \hfill May 2019 \\
+& $\diamond$ Silver Medal, ICPC China Xi'an National Invitational Contest \hfill May 2019 \\
 % & $\diamond$ Silver Medal, ICPC China Xian National Invitational \hfill May 2019 \\
 % & $\ \ $ Programming Contest \\
 
@@ -218,17 +227,17 @@
 & $\diamond$ SIGCOMM (2024), HPCA (2024), SOSP (2023), OSDI (2023), ATC (2023), MLSys (2023) \\
 & \textbf{External Reviewer} \\
 & $\diamond$ INFOCOM (2022--2025), ICDCS (2023), APSys (2021), MSN (2021), Qshine (2020) \\
-& \textbf{Student Helper} \\
+& \textbf{Student Volunteer} \\
 & $\diamond$ APNet (2023), ICMLC \& ICWAPR (2018) \\
 & \\
 
 % --- Section: Teaching activities --- %
-{\textsc{Teaching }}
+{\textsc{Teaching}}
 & \textbf{Hong Kong University of Science and Technology} \\
 {\textsc{Activities}}
 & \textit{Teaching Assistant, Department of Computer Science and Engineering} \\
 & $\diamond$ CSIT6000O: Advanced Cloud Computing (Spring 2022, Spring 2023) \\
-& $\diamond$ COMP4651: Cloud Computing and Big Data Systems (Spring 2021, Fall 2021, Spring 2024) \\
+& $\diamond$ COMP4651: Cloud Computing and Big Data Systems (Spring/Fall 2021, Spring 2024) \\
 & $\diamond$ COMP3511: Operating Systems (Fall 2023) \\
 & \\
 
