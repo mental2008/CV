@@ -52,12 +52,12 @@
 \begin{tabular}{lll}
 % % Line 1: Email, GitHub, LinkedIn
 \textbf{Email}: \href{mailto:lyangbk@cse.ust.hk}{\underline{lyangbk@cse.ust.hk}} &
-\hspace{0.65in} \textbf{GitHub}: \href{https://github.com/mental2008}{\underline{mental2008}} &
+\hspace{0.25in} \textbf{GitHub}: \href{https://github.com/mental2008}{\underline{mental2008}} &
 \hspace{0.25in} \textbf{LinkedIn}: \href{https://www.linkedin.com/in/stephenyang1999/}{\underline{stephenyang1999}} \\
 
 % % Line 2: Phone number, office location, website
 \textbf{Phone}: (+86) 135-0284-6103 &
-\hspace{0.65in} \textbf{Office}: BDI 101, UC, HKUST &
+\hspace{0.25in} \textbf{Office}: BDI 101, UC, HKUST &
 \hspace{0.25in} \textbf{Web}: \href{https://www.lingyunyang.com/}{\underline{https://www.lingyunyang.com/}} \\
 \end{tabular}
 \end{center}
@@ -65,7 +65,7 @@
 % Set the width of each column
 % \begin{longtable}{p{1.3in}p{4.8in}}
 % \begin{longtable}{p{1.3in}p{5.0in}}
-\begin{longtable}{p{0.7in}p{6.0in}}
+\begin{longtable}{p{0.9in}p{6.0in}}
 
 % --- Section: Personal profile --- %
 % {\textsc{Profile}}
@@ -77,10 +77,10 @@
 
 % --- Section: Research interests --- %
 \nohyphens{\textsc{Research Interests}}
-% \textsc{Research}
 & I have a broad interest in resource management for large-scale data centers / AI infrastructure.
-Specifically, my research focuses on: (a) improving \textit{resource efficiency} for AI/GPU clusters; (b) building \textit{efficient} and \textit{low-cost} AI model serving systems. \\
-% \textsc{Interests}
+Specifically, my research focuses on: (a) improving \textit{resource efficiency} for AI/GPU clusters; (b) building \textit{efficient} and \textit{low-cost} AI model serving systems.
+My first-authored papers have been published in top-tier systems conferences (NSDI, ATC, SoCC).
+\\
 & \\
 
 % --- Section: Education --- %
@@ -97,70 +97,12 @@ Specifically, my research focuses on: (a) improving \textit{resource efficiency}
 & $\diamond$ Studied at All-English Innovation Class (GPA: 3.82/4); National Scholarship. \\
 & \\
 
-% --- Section: Professional experience ---
-
-\nohyphens{\textsc{Internship}}
-% {\textsc{Professional}}
-& {\textbf{Alibaba Group \& Alibaba Cloud}} \hfill Hangzhou, China \\
-% {\textsc{Experience}}
-& \textit{Research Intern}, Cluster Management Group, AI Infra \hfill Dec. 2020 -- Present \\
-& $\diamond$ Mentor: Dr. Yinghao Yu \\
-
-% & \textbf{Resource Management for AI/GPU Clusters} \\
-
-% & \textit{\emph{Mitigate GPU Resource Fragmentation}} \\
-    & $\diamond$
-    Defragment GPUs in Heterogeneous GPU Clusters (\underline{ATC 2023}).
-    % [\textbf{ATC 2023, C3}]
-    % Formally quantified \textit{statistical GPU resource fragments} and proposed the \textit{fragmentation gradient descent} scheduling algorithm to reduce resource fragmentation. Our scheduling policy can significantly reduce \textit{unallocated} GPUs by up to 49\% compared to state-of-the-art policies.
-    % [\href{https://github.com/hkust-adsl/kubernetes-scheduler-simulator}{\underline{code}}]
-    % [\href{https://github.com/alibaba/clusterdata/tree/master/cluster-trace-gpu-v2023}{\underline{trace}}]
-    \\
-
-    % & $\diamond$
-    % [\textbf{Under Review, I1}]
-    % Proposed a GPU-disaggregated DLRM serving system to eliminate \textit{resource mismatch} and meet \textit{elastic} demand.
-    % By leveraging RDMA network to \textit{separately} compute the computation graph on GPU and CPU nodes, it reduced CPU fragments by 53\% and GPU fragments by 27\%.
-    % During seasonal traffic peaks (e.g., Double 11 Shopping Festival), it saved up to 90\% of GPUs when loaning GPU servers from training clusters. \\
-    \\
-
-    % & $\diamond$ Developed ParaSet, a \textit{best-effort} workload on Kubernetes that dynamically adjusts the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster and is integrated into KubeDL for internal use. \\
-
-% & \textit{\emph{Large-Scale GPU Sharing in Production}} \\
-%     & $\diamond$ Enabled \textit{large-scale GPU sharing} in production clusters, with over 10k shared GPU containers running daily. Support the co-location of GPU tasks with different priorities (e.g., \textit{latency-sensitive}, \textit{best-effort}). Designed and implemented the \textit{node-level} agent and the \textit{cluster-level} controller. The agent periodically collects and reports resource usage metrics and dynamically allocates GPU resources to containers. The controller calculates potential resource overcommitment and provides scheduling guidance to the cluster scheduler. \\
-
-% & \textbf{Efficient and Low-cost AI Model Serving Systems} \\
-% & \textit{\emph{Efficient Text-to-Image Diffusion Model Serving with Add-on Modules}} \\
-%     & $\diamond$
-%         [\textbf{Under Review, I2}]
-%         Developed SwiftDiffusion, a system that efficiently generates high-quality images with stable diffusion models and add-on modules (i.e., ControlNets and LoRAs). Incorporated serveral novel designs, including ControlNet-as-a-Service, asynchronous LoRA loading, and kernel optimization. Achieved up to 7.8$\times$ in latency and 1.6$\times$ in throughput without compromising image quality.\\
-% & \textit{\emph{Auto-Configuration for AI Serving Service}} \\
-%     & $\diamond$
-%     [\textbf{SoCC 2021, C1}]
-%     Developed Morphling, an open-source auto-configuration framework for AI serving on Kubernetes.
-%     Combined \textit{meta-learning} and \textit{bayesian optimization} to quickly find the \textit{optimal} resource configuration (e.g., CPU cores, GPU timeshare, GPU memory, GPU type) and runtime parameters (e.g., batch size).
-%     % It was widely used in Alibaba for automated recommendation of container resource specifications.
-%     [\href{https://github.com/kubedl-io/morphling}{\underline{code}}]
-%     \\
-% & \\
-
-& {\textbf{Microsoft Research Asia (MSRA)}} \hfill Beijing, China\\
-& \textit{Research Intern}, Innovation Engineering Group (IEG) \hfill Jul. 2019 -- Jun. 2020 \\
-    % & $\diamond$ Mentors: Lewei Lu \& Chong Li \\
-    % & $\diamond$ Designed a symmetric padding pooling layer with self-attention which can be easily integrated into any model structure, achieve the state-of-the-art performance and improve the robustness to various pertubations. \\
-    % & $\diamond$ Built a neural architecture search pipeline for face recognition tasks. \\
-    % & $\diamond$ Applied multiple latest attention mechanisms to face recognition models, integrated with knowledge distillation, built in CNTK. \\
-    & $\diamond$ Conducted research on model robustness, face recognition, attention mechanisms, knowledge distillation, and neural architecture search; Star of Tomorrow Internship Award of Excellence. \\
-
-% & $\diamond$ Applied multiple latest attention mechanisms to face recognition models, integrated with knowledge distillation, built in CNTK. \\
-% & $\diamond$ Built a neural architecture search pipeline for face recognition tasks. \\
-% & $\diamond$ Designed a symmetric padding pooling layer with self-attention which can be easily integrated into any model structure, achieve the state-of-the-art performance and improve the robustness to various pertubations. \\
-& \\
-
 % --- Section: Publications --- %
 \nohyphens{\textsc{Publications}}
 & \textit{* denotes co-first authors, sort in alphabetical order} \\
 & \textbf{Refereed Papers in Conference Proceedings} \\
+\hfill [C4]
+& \textbf{\emph{Lingyun Yang}}, Yongchen Wang, Yinghao Yu, Qizhen Weng, Jianbo Dong, Kan Liu, Chi Zhang, Yanyi Zi, Hao Li, Zechao Zhang, Nan Wang, Yu Dong, Menglei Zheng, Lanlan Xi, Xiaowei Lu, Liang Ye, Guodong Yang, Binzhang Fu, Tao Lan, Liping Zhang, Lin Qu, Wei Wang, “GPU-Disaggregated Serving for Deep Learning Recommendation Models at Scale,” in the \textit{Proceedings of the 22nd USENIX Symposium on Networked Systems Design and Implementation} (\textbf{NSDI '25}), Philadelphia, PA, USA, April 2025. \textit{(\textbf{CCF-A}, acceptance rate: 55/401=13.7\%)} \\
 \hfill [C3]
 & Qizhen Weng*, \textbf{\emph{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Xiaochuan Tang, Guodong Yang, Liping Zhang, “Beware of Fragmentation: Scheduling GPU-Sharing Workloads with Fragmentation Gradient Descent,” in the \textit{Proceedings of USENIX Annual Technical Conference} (\textbf{ATC '23}), Boston, MA, USA, July 2023. \textit{(\textbf{CCF-A}, acceptance rate: 65/353=18.4\%)} \\
 \hfill [C2]
@@ -168,11 +110,67 @@ Specifically, my research focuses on: (a) improving \textit{resource efficiency}
 \hfill [C1]
 & Luping Wang*, \textbf{\emph{Lingyun Yang}}*, Yinghao Yu, Wei Wang, Bo Li, Xianchao Sun, Jian He, and Liping Zhang, “Morphling: Fast, Near-Optimal Auto-Configuration for Cloud-Native Model Serving,” in the \textit{Proceedings of ACM Symposium on Cloud Computing} (\textbf{SoCC '21}), Seattle, WA, USA, November 2021. \textit{(\textbf{CCF-B}, acceptance rate: 46/145=31.7\%)} \\
 & \textit{In submission / Preprint} \\
-\hfill [I2]
-& Suyi Li*, \textbf{\emph{Lingyun Yang}}*, Xiaoxiao Jiang, Hanfeng Lu, Zhipeng Di, Weiyi Lu, Jiawei Chen, Kan Liu, Yinghao Yu, Tao Lan, Guodong Yang, Lin Qu, Liping Zhang, Wei Wang, “SwiftDiffusion: Efficient Diffusion Model Serving with Add-on Modules,” \textit{arXiv preprint arXiv:2407.02031}, 2024. \\
 \hfill [I1]
-& \textbf{\emph{Lingyun Yang}}, Yongchen Wang, Yinghao Yu, Qizhen Weng, Jianbo Dong, Kan Liu, Chi Zhang, Yanyi Zi, Hao Li, Zechao Zhang, Nan Wang, Yu Dong, Menglei Zheng, Lanlan Xi, Xiaowei Lu, Liang Ye, Guodong Yang, Binzhang Fu, Tao Lan, Liping Zhang, Lin Qu, Wei Wang, “GPU-Disaggregated Serving for Deep Learning Recommendation Models at Scale,” \textit{under review}. \\
+& Suyi Li*, \textbf{\emph{Lingyun Yang}}*, Xiaoxiao Jiang, Hanfeng Lu, Zhipeng Di, Weiyi Lu, Jiawei Chen, Kan Liu, Yinghao Yu, Tao Lan, Guodong Yang, Lin Qu, Liping Zhang, Wei Wang, “SwiftDiffusion: Efficient Diffusion Model Serving with Add-on Modules,” \textit{arXiv preprint arXiv:2407.02031}, 2024. \\
 & \\
+
+% --- Section: Professional experience ---
+
+\nohyphens{\textsc{Internship}}
+% {\textsc{Professional}}
+& {\textbf{Alibaba Group}} \hfill Hangzhou, China \\
+% {\textsc{Experience}}
+& \textit{Research Intern}, Cluster Management Group, AI Infra \hfill Dec. 2020 -- Present \\
+& $\diamond$ Mentor: Dr. Yinghao Yu \\
+
+2024 -- 2024
+% & \textbf{Efficient and Low-cost AI Model Serving Systems} \\
+& \textbf{\emph{Efficient Text-to-Image Diffusion Model Serving with Add-on Modules}} \\
+    & $\diamond$ Developed SwiftDiffusion, a system that efficiently generates high-quality images with stable diffusion models and add-on modules (i.e., ControlNets and LoRAs). \\
+    & $\diamond$ Analyzed usage patterns of various add-on modules (ControlNets, LoRAs) based on \textbf{500k} request traces from production text-to-image services. \\
+    & $\diamond$ Incorporated several novel system designs, e.g., ControlNet-as-a-Service, async bounded LoRA loading, latent parallelelism for CFG computation. \\
+    & $\diamond$ Achieved up to \textbf{7.8$\times$} in serving latency and \textbf{1.6$\times$} in throughput. \\
+    & $\diamond$ One paper is in submission and under review [\href{https://arxiv.org/abs/2407.02031}{\underline{arXiv}}]. \\
+
+2022 -- 2023
+& \textbf{\emph{GPU-Disaggregated Serving for Deep Learning Recommendation Models at Scale}} \\
+    % & $\diamond$
+    % Proposed a GPU-disaggregated DLRM serving system to eliminate \textit{resource mismatch} and meet \textit{elastic} demand.
+    % By leveraging RDMA network to \textit{separately} compute the computation graph on GPU and CPU nodes, it reduced CPU fragments by 53\% and GPU fragments by 27\%.
+    % During seasonal traffic peaks (e.g., Double 11 Shopping Festival), it saved up to 90\% of GPUs when loaning GPU servers from training clusters. \\
+    & $\diamond$ Proposed a GPU-disaggregated DLRM serving system to eliminate \textit{resource mismatch} and meet \textit{elastic} demand; leveraged RDMA network to offload computation on separate GPU and CPU nodes; resource-aware graph partitioning; topology-aware scheduling. \\
+    & $\diamond$ In daily scenarios (e.g., a crowded GPU cluster with > 90\% allocation rate), reduced CPU fragments by \textbf{53\%} and GPU fragments by \textbf{27\%}. In the Double 11 Shopping Festival, saved up to \textbf{90\%} of GPUs when loaning GPU servers from training clusters. \\
+    & $\diamond$ One paper was accepted by \textbf{\emph{NSDI '25}}. \\
+
+2022 -- 2023
+& \textbf{\emph{Resource Fragmentation Analysis and Optimization for GPU-Sharing Clusters}} \\
+    & $\diamond$ Formally quantified \textit{statistical GPU resource fragments} and proposed the \textit{fragmentation gradient descent} scheduling algorithm to reduce resource fragmentation. Our scheduling policy can significantly reduce \textit{unallocated} GPUs by up to \textbf{49\%} compared to state-of-the-art policies. [\href{https://github.com/hkust-adsl/kubernetes-scheduler-simulator}{\underline{code}}] [\href{https://github.com/alibaba/clusterdata/tree/master/cluster-trace-gpu-v2023}{\underline{trace}}] \\
+    & $\diamond$ Developed ParaSet, a \textit{best-effort} workload on Kubernetes that dynamically adjusts the number of instances and resource requirements based on the real-time resource availability in the cluster. It aims to fill resource fragments in the cluster and is integrated into KubeDL for internal use. \\
+    & $\diamond$ One paper was accepted by \textbf{\emph{ATC '23}}. \\
+
+\\
+
+2021 -- 2022
+& \textbf{\emph{Large-Scale GPU Sharing and Overcommitment in Production}} \\
+    & $\diamond$ Enabled \textit{large-scale GPU sharing and overcommitment} in production clusters, with \textit{tens of thousands }of \textit{shared} GPU containers running daily. Support the co-location of GPU tasks with different priorities (e.g., \textit{latency-sensitive}, \textit{spot}, \textit{best-effort}). \\
+    & $\diamond$ Specifically, I designed and implemented the \textit{node-level} agent and the \textit{cluster-level} controller. The agent periodically collects and reports resource usage metrics and \textit{dynamically} allocates GPU resources to containers. The controller calculates potential resource overcommitment and provides scheduling guidance to the cluster scheduler. \\
+
+2020 -- 2021
+& \textbf{\emph{Fast, Near-Optimal Auto-Configuration for Cloud-Native Model Serving}} \\
+    & $\diamond$ Developed Morphling, an auto-configuration framework for AI serving on Kubernetes; combined \textit{meta-learning} and \textit{bayesian optimization} to quickly find the \textit{optimal} resource configuration (e.g., CPU cores, GPU timeshare, GPU memory, GPU type) and runtime parameters (e.g., batch size). [\href{https://github.com/kubedl-io/morphling}{\underline{code}}] \\
+    & $\diamond$ It was widely used in Alibaba for automated recommendation of container resource specifications; part of Alibaba's open-sourced \href{https://github.com/kubedl-io/kubedl}{\underline{KubeDL}}, a \href{https://landscape.cncf.io/?item=provisioning--automation-configuration--kubedl}{\underline{CNCF sandbox}} project. \\
+    & $\diamond$ One paper was accepted by \textbf{\emph{SoCC '21}}. \\
+
+\\
+
+& {\textbf{Microsoft Research Asia (MSRA)}} \hfill Beijing, China\\
+& \textit{Research Intern}, Innovation Engineering Group (IEG) \hfill Jul. 2019 -- Jun. 2020 \\
+    & $\diamond$ Mentors: Lewei Lu \& Chong Li \\
+    & $\diamond$ Designed a novel pooling layer to enhance the robustness of image recognition models; built Neural Architecture Search (NAS) workflow for face recognition tasks; implemented various attention modules for face recognition models on CNTK. \\
+    & $\diamond$ Star of Tomorrow Internship Award of Excellence. \\
+
+& \\
+
 
 % --- Section: Awards, scholarships, etc. --- %
 % --- Note: section title is spread over two lines --- %
